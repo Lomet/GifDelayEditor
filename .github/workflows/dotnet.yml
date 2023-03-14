@@ -1,23 +1,24 @@
-name: Build and Test
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: .NET
 
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
-  build-and-test:
+  build:
+
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Restore NuGet packages
-      run: dotnet restore
-
-    - name: Build and Test
-      run: dotnet build --configuration Release --no-restore
-
-    - name: Run unit tests
-      run: dotnet test --no-build --configuration Release --logger "trx;LogFileName=test_results.trx"
+    - uses: actions/checkout@v3
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v3
+    - name: Build
+      run: dotnet build
+    - name: Test
+      run: dotnet test
