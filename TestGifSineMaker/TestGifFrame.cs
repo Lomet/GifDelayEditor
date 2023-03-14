@@ -4,20 +4,20 @@ namespace GifsineMaker.Tests;
 
 public class GifFrameTests
 {
-    //[Fact]
-    //public void Constructor_ShouldCreateGifFrameWithCorrectProperties()
-    //{
-    //    // Arrange
-    //    Image frame = new Bitmap(100, 100);
-    //    int delay = 100;
+    [Fact]
+    public void Constructor_ShouldCreateGifFrameWithCorrectProperties()
+    {
+        // Arrange
+        Image frame = new Bitmap(100, 100);
+        int delay = 100;
 
-    //    // Act
-    //    GifFrame gifFrame = new GifFrame(frame, delay);
+        // Act
+        GifFrame gifFrame = new GifFrame(frame, delay);
 
-    //    // Assert
-    //    Assert.Equal(frame, gifFrame.Frame);
-    //    Assert.Equal(delay, gifFrame.Delay);
-    //}
+        // Assert
+        Assert.Equal(frame, gifFrame.Frame);
+        Assert.Equal(delay, gifFrame.Delay);
+    }
 
     [Fact]
     public void Constructor_ShouldThrowException_WhenFrameIsNull()
