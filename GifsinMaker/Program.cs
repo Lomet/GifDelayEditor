@@ -4,13 +4,24 @@ class Program
 {
     static void Main(string[] args)
     {
-        string inputFile = "sphere.gif";
-        string outputFile = $"output_{Math.Abs(DateTime.Now.GetHashCode())}.gif";
-        double maxDelayRatio = 2;
-        double SpeedUpRatio = 1.5;
+        if (args.Length != 4)
+        {
+            Console.WriteLine("Usage: program.exe inputfile outputfile maxdelayratio speedupratio");
+            return;
+        }
 
-        Run(inputFile, outputFile, maxDelayRatio, SpeedUpRatio);
+        if (!double.TryParse(args[2], out double maxDelayRatio) || !double.TryParse(args[3], out double speedUpRatio))
+        {
+            Console.WriteLine("Error: maxdelayratio and speedupratio must be valid floating-point numbers.");
+            return;
+        }
+
+        string inputFile = args[0];
+        string outputFile = args[1];
+
+        Run(inputFile, outputFile, maxDelayRatio, speedUpRatio);
     }
+
     private static void Run(string inputFile, string outputFile, double maxDelayRatio,double speedUpRatio)
     {
         var frames = new GifLoader(inputFile).AddReverse();
