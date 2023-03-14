@@ -25,11 +25,10 @@ public class GifLoader
             }
         }
     }
-    public GifLoader AddReverse()
+    public void AddReverse()
     {
         var temp = new List<GifFrame>(Frames);
         temp.Reverse();
         Frames.AddRange(temp.Skip(1));
-        return this;
     }
 }

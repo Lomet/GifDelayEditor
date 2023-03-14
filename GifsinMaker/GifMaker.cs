@@ -1,14 +1,11 @@
 ﻿using GifMotion;
-
 namespace GifsineMaker;
 
 public class GifMaker : GifLoader
 {
-    public GifMaker(string inputFile, double maxDelayRatio, double speedUpRatio) : base(inputFile)
+    public GifMaker(string inputFile) : base(inputFile)
     {
         AddReverse();
-        NewDelays(new GifSineWave(Count, maxDelayRatio * Average)
-        .Absalute(speedUpRatio * Average, (int)Average));
     }
     public void SaveGif(string outputFile)
     {
@@ -23,11 +20,10 @@ public class GifMaker : GifLoader
             }
         }
     }
-    public GifMaker NewDelays(List<int> Delays)
+    public GifMaker NewDelays(double maxDelayRatio, double speedUpRatio)
     {
-        if (Delays.Count != Count)
-            throw new ArgumentOutOfRangeException(nameof(Delays));
-        Frames = Frames.Zip(Delays, (frame, delay) =>
+        Frames = Frames.Zip(new GifSineWave(Count, maxDelayRatio * Average, speedUpRatio * Average, (int)Average),
+            (frame, delay) =>
         {
             frame.Delay = delay;
             return frame;

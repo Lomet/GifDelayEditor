@@ -1,14 +1,12 @@
-﻿public class GifSineWave
+﻿public class GifSineWave : List<int>
 {
-    public List<int> Delays { get; set; } = new List<int>();
-    public List<int> Absalute(double min,int value) => Delays.Select(delay => Math.Abs(delay) > min ? Math.Abs(delay) : value).ToList();
-    public GifSineWave(int frameCount, double maxDelay, double startAngle =  - 0.5 * Math.PI)
+    public GifSineWave(int frameCount, double maxDelay, double min, int value, double startAngle =  - 0.5 * Math.PI) // sine(-0.5 pi) == sine(1.5 pi)
     {
         double period = 2 * Math.PI / frameCount;
         for (int i = 0; i < frameCount; i++)
         {
-            double delay = maxDelay * Math.Sin((i * period) + startAngle);
-            Delays.Add((int)delay);          
+            int delay = (int)(maxDelay * Math.Sin((i * period) + startAngle));
+            Add(Math.Abs(delay) > min ? Math.Abs(delay) : value);          
         }
     }
 }

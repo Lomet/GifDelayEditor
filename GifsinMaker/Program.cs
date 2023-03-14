@@ -16,6 +16,7 @@ class Program
         }
         string inputFile = args[0];
         string outputFile = args[1];
-        new GifMaker(inputFile, maxDelayRatio, speedUpRatio).SaveGif(outputFile);    
+
+        new GifMaker(inputFile).NewDelays(maxDelayRatio, speedUpRatio).SaveGif(outputFile);    
     }
 }
