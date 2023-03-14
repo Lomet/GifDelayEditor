@@ -16,10 +16,9 @@ namespace SineWaveGIF
 
         private static void Run(string inputFile, string outputFile, double maxDelayRatio,double speedUpRatio)
         {
-            var frames = new GifLoader(inputFile);
-            frames.AddReverse();
-            var sineWave = new GifSineWave(frames.Count, maxDelayRatio * frames.Average);
-            var delays = sineWave.Absalute(speedUpRatio * frames.Average, (int)frames.Average);
+            var frames = new GifLoader(inputFile).AddReverse();
+            var delays = new GifSineWave(frames.Count, maxDelayRatio * frames.Average)
+                .Absalute(speedUpRatio * frames.Average, (int)frames.Average);
             new GifMaker(frames.Frames).NewDeleys(delays).SaveGif(outputFile);
         }
     }

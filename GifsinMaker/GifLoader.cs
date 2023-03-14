@@ -25,11 +25,12 @@ namespace GifsinMaker
                 }
             }
         }
-        public void AddReverse()
+        public GifLoader AddReverse()
         {
             var temp = new List<GifFrame>(Frames);
             temp.Reverse();
             Frames.AddRange(temp.Skip(1));
+            return this;
         }
     }
 }
