@@ -14,9 +14,12 @@ class Program
             Console.WriteLine("Error: maxdelayratio and speedupratio must be valid floating-point numbers.");
             return;
         }
-        string inputFile = args[0];
-        string outputFile = args[1];
+        if (!File.Exists(args[0]))
+        {
+            Console.WriteLine($"Input file not found: {args[0]}");
+            return;
+        }
 
-        new GifMaker(inputFile).NewDelays(maxDelayRatio, speedUpRatio).SaveGif(outputFile);    
+        new GifMaker(args[0]).NewDelays(maxDelayRatio, speedUpRatio).SaveGif(args[1]);    
     }
 }
