@@ -22,14 +22,18 @@ namespace GifsinMaker
                 }
             }
         }
-        public GifMaker NewDeleys(List<int> Delays)
+        public GifMaker NewDelays(List<int> Delays)
         {
-            if (Delays.Count != Gifs.Count) throw new ArgumentOutOfRangeException(nameof(Delays));
-            for (int i = 0; i < Gifs.Count; i++)
-            {
-                Gifs[i].Delay = Delays[i];
-            }
+            if (Delays.Count != Gifs.Count)
+                throw new ArgumentOutOfRangeException(nameof(Delays));
+
+            Gifs = Gifs.Zip(Delays, (frame, delay) => {
+                frame.Delay = delay;
+                return frame;
+            }).ToList();
+
             return this;
         }
+
     }
 }
