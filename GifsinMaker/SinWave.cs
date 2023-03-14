@@ -7,7 +7,7 @@
         double period = 2 * Math.PI / frameCount;
         for (int i = 0; i < frameCount; i++)
         {
-            double delay = maxDelay * Math.Sin(i * period + startAngle);
+            double delay = maxDelay * Math.Sin((i * period) + startAngle);
             Delays.Add((int)delay);          
         }
     }
