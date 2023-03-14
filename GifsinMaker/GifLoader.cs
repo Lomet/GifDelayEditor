@@ -7,6 +7,7 @@ namespace GifsinMaker
     {
         public List<GifFrame> Frames { get; set; } = new();
         public int Count => Frames.Count;
+        public double Average => Frames.Select(T => T.Delay).Average();
         public GifLoader(string inputFile)
         {
             // Load the GIF file into a list of GifFrame objects
