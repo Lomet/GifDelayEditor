@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/lomet/gifdelayeditor/badge)](https://www.codefactor.io/repository/github/lomet/gifdelayeditor)
+
 # SineWaveGIF
 
 SineWaveGIF is a command-line tool that creates a sine wave animation from an input GIF file.
