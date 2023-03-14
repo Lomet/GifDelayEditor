@@ -16,12 +16,14 @@ The SineWaveGIF command-line tool has the following syntax:
 SineWaveGIF.exe <input-file> <output-file> <max-delay-ratio> <speed-up-ratio>
 ```
 
-## Where:
-
+Where:
+```
 <input-file> is the path to the input GIF file
 <output-file> is the path to the output GIF file
-<max-delay-ratio> is a double value that controls the maximum delay of the sine wave animation. The default value is 2.
-<speed-up-ratio> is a double value that controls the speed-up factor of the sine wave animation. The default value is 1.5.
+<max-delay-ratio> is a double value that controls the maximum delay factor of the sine wave animation.
+<speed-up-ratio> is a double value that controls the speed-up factor of the sine wave animation.
+```
+
 ## Example
 To create a sine wave animation from input.gif with a maximum delay ratio of 2 and a speed-up ratio of 1.5, and save the result to output.gif, run the following command:
 
