@@ -33,6 +33,4 @@ public class GifMaker
         }).ToList();
         return this;
     }
-
 }
-
