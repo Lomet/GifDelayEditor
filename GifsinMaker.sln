@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GifsinMaker", "GifsinMaker\GifsinMaker.csproj", "{70A1D47A-739E-4200-B80D-76396830E00F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70A1D47A-739E-4200-B80D-76396830E00F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70A1D47A-739E-4200-B80D-76396830E00F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70A1D47A-739E-4200-B80D-76396830E00F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70A1D47A-739E-4200-B80D-76396830E00F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E40B66F-65DF-44D3-8EB2-78987EE7BBC9}
+	EndGlobalSection
+EndGlobal
