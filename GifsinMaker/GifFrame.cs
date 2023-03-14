@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace GifsinMaker;
+namespace GifsineMaker;
 public class GifFrame
 {
     public GifFrame(Image frame, int delay)

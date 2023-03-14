@@ -1,6 +1,6 @@
 ﻿using GifMotion;
 
-namespace GifsinMaker;
+namespace GifsineMaker;
 
 public class GifMaker
 {

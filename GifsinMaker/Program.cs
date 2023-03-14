@@ -1,4 +1,4 @@
-﻿using GifsinMaker;
+﻿using GifsineMaker;
 namespace SineWaveGIF;
 class Program
 {
