@@ -1,7 +1,5 @@
 ﻿using GifsinMaker;
-
 namespace SineWaveGIF;
-
 class Program
 {
     static void Main(string[] args)
@@ -13,7 +11,6 @@ class Program
 
         Run(inputFile, outputFile, maxDelayRatio, SpeedUpRatio);
     }
-
     private static void Run(string inputFile, string outputFile, double maxDelayRatio,double speedUpRatio)
     {
         var frames = new GifLoader(inputFile).AddReverse();
