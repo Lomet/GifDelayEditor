@@ -26,8 +26,19 @@ SineWaveGIF.exe <input-file> <output-file> <max-delay-ratio> <speed-up-ratio>
 To create a sine wave animation from input.gif with a maximum delay ratio of 2 and a speed-up ratio of 1.5, and save the result to output.gif, run the following command:
 
 ```
+input.gif
+```
+![input](https://user-images.githubusercontent.com/48094744/224869873-0a12756a-6af4-407e-a030-95735fcd60a4.gif)
+
+```
 SineWaveGIF.exe input.gif output.gif 2 1.5
 ```
+
+```
+output.gif
+```
+
+![output](https://user-images.githubusercontent.com/48094744/224869863-fccd001d-639c-4297-8b82-d3ab439759f6.gif)
   
 ## License
 SineWaveGIF is licensed under the MIT License. See the LICENSE file for more information.
