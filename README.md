@@ -1,4 +1,5 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/lomet/gifdelayeditor/badge)](https://www.codefactor.io/repository/github/lomet/gifdelayeditor)
+[![Build and Test](https://github.com/Lomet/GifDelayEditor/actions/workflows/dotnet.yml/badge.svg)](https://github.com/Lomet/GifDelayEditor/actions/workflows/dotnet.yml)
 
 # SineWaveGIF
 
