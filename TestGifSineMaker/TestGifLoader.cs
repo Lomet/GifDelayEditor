@@ -48,36 +48,36 @@ namespace GifsineMaker.Tests
             Assert.Throws<FileNotFoundException>(() => new GifLoader(inputFile));
         }
 
-        [Fact(Skip = "Borken")]
-        public void TestGifMaker()
-        {
-            // Create a test GIF file with 3 frames, each with a delay of 100 ms
-            string inputFile = "test_input.gif";
-            using (Image gifImage = new Bitmap(100, 100))
-            using (GifCreator creator = AnimatedGif.Create(inputFile, 100))
-            {
-                creator.AddFrame(gifImage, 100);
-                creator.AddFrame(gifImage, 100);
-                creator.AddFrame(gifImage, 100);
-            }
+        //[Fact]
+        //public void TestGifMaker()
+        //{
+        //    // Create a test GIF file with 3 frames, each with a delay of 100 ms
+        //    string inputFile = "test_input.gif";
+        //    using (Image gifImage = new Bitmap(100, 100))
+        //    using (GifCreator creator = AnimatedGif.Create(inputFile, 100))
+        //    {
+        //        creator.AddFrame(gifImage, 100);
+        //        creator.AddFrame(gifImage, 100);
+        //        creator.AddFrame(gifImage, 100);
+        //    }
 
-            // Create a GifMaker object with the test input file
-            GifMaker maker = new(inputFile,false);
+        //    // Create a GifMaker object with the test input file
+        //    GifMaker maker = new(inputFile,false);
 
-            // Modify the delays using a sine wave with maxDelayRatio = 1 and speedUpRatio = 1
-            maker.NewDelays(1, 1);
+        //    // Modify the delays using a sine wave with maxDelayRatio = 1 and speedUpRatio = 1
+        //    maker.NewDelays(1, 1);
 
-            // Save the modified GIF to an output file
-            string outputFile = "test_output.gif";
-            maker.SaveGif(outputFile);
+        //    // Save the modified GIF to an output file
+        //    string outputFile = "test_output.gif";
+        //    maker.SaveGif(outputFile);
 
-            // Load the output file using the GifLoader class
-            GifLoader loader = new(outputFile);
+        //    // Load the output file using the GifLoader class
+        //    GifLoader loader = new(outputFile);
 
-            // Verify that the output file has the expected properties
-            Assert.Equal(6, loader.Count); // 3 original frames + 3 reversed frames
-            Assert.Equal(100, loader.Frames[0].Delay); // first frame should have the same delay as before
-            Assert.True(loader.Frames.Skip(1).Select(f => f.Delay).All(d => d >= 0)); // all other delays should be non-negative
-        }
+        //    // Verify that the output file has the expected properties
+        //    Assert.Equal(6, loader.Count); // 3 original frames + 3 reversed frames
+        //    Assert.Equal(100, loader.Frames[0].Delay); // first frame should have the same delay as before
+        //    Assert.True(loader.Frames.Skip(1).Select(f => f.Delay).All(d => d >= 0)); // all other delays should be non-negative
+        //}
     }
 }
