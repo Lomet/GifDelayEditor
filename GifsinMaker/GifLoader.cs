@@ -31,13 +31,5 @@ namespace GifsinMaker
             temp.Reverse();
             Frames.AddRange(temp.Skip(1));
         }
-        public void NewDeleys(List<int> Delays)
-        {
-            if (Delays.Count != Count) throw new ArgumentOutOfRangeException(nameof(Delays));
-            for (int i = 0; i < Count; i++)
-            {
-                Frames[i].Delay = Delays[i];
-            }
-        }
     }
 }

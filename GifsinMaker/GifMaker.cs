@@ -4,7 +4,7 @@ namespace GifsinMaker
 {
     public class GifMaker
     {
-        private List<GifFrame> Gifs { get; set; } = new();
+        private List<GifFrame> Gifs { get; set; }
         public GifMaker(List<GifFrame> gifs)
         {
             Gifs = gifs;
@@ -21,6 +21,15 @@ namespace GifsinMaker
                     creator.AddFrame(item.Frame, item.Delay);
                 }
             }
+        }
+        public GifMaker NewDeleys(List<int> Delays)
+        {
+            if (Delays.Count != Gifs.Count) throw new ArgumentOutOfRangeException(nameof(Delays));
+            for (int i = 0; i < Gifs.Count; i++)
+            {
+                Gifs[i].Delay = Delays[i];
+            }
+            return this;
         }
     }
 }
