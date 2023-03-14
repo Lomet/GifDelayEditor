@@ -52,7 +52,7 @@ namespace GifsineMaker.Tests
         public void TestGifMaker()
         {
             // Create a test GIF file with 3 frames, each with a delay of 100 ms
-            string inputFile = "test_input.gif";
+            string inputFile = "program_test_input.gif";
             using (Image gifImage = new Bitmap(100, 100))
             using (GifCreator creator = AnimatedGif.Create(inputFile, 100))
             {
@@ -68,7 +68,7 @@ namespace GifsineMaker.Tests
             maker.NewDelays(1, 1);
 
             // Save the modified GIF to an output file
-            string outputFile = "test_output.gif";
+            string outputFile = "program_test_output.gif";
             maker.SaveGif(outputFile);
 
             // Load the output file using the GifLoader class
