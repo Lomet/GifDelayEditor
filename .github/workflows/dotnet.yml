@@ -12,15 +12,11 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
-
     - name: Restore dependencies
       run: dotnet restore
-      
     - name: Build
       run: dotnet build --configuration Release --no-restore
-
     - name: Run Tests
       run: dotnet test --configuration Release --no-restore --collect:"XPlat Code Coverage"
-      
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v3
