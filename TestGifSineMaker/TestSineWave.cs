@@ -22,5 +22,4 @@ public class TestSineWave
             Assert.True(delay >= min);
         }
     }
-
 }
