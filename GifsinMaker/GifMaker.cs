@@ -2,21 +2,22 @@
 
 namespace GifsineMaker;
 
-public class GifMaker
+public class GifMaker : GifLoader
 {
-    private List<GifFrame> Gifs { get; set; }
-    public GifMaker(List<GifFrame> gifs)
+    public GifMaker(string inputFile, double maxDelayRatio, double speedUpRatio) : base(inputFile)
     {
-        Gifs = gifs;
+        AddReverse();
+        NewDelays(new GifSineWave(Count, maxDelayRatio * Average)
+        .Absalute(speedUpRatio * Average, (int)Average));
     }
     public void SaveGif(string outputFile)
     {
-        if (!Gifs.Any()) throw new MissingMemberException(nameof(Gifs));
+        if (!Frames.Any()) throw new MissingMemberException(nameof(Frames));
         // Create a new GifCreator object with the adjusted delays
         using (GifCreator creator = AnimatedGif.Create(outputFile, 30))
         {
             // Add the frames to the GifCreator object with the adjusted delays
-            foreach (var item in Gifs)
+            foreach (var item in Frames)
             {
                 creator.AddFrame(item.Frame, item.Delay);
             }
@@ -24,9 +25,9 @@ public class GifMaker
     }
     public GifMaker NewDelays(List<int> Delays)
     {
-        if (Delays.Count != Gifs.Count)
+        if (Delays.Count != Count)
             throw new ArgumentOutOfRangeException(nameof(Delays));
-        Gifs = Gifs.Zip(Delays, (frame, delay) =>
+        Frames = Frames.Zip(Delays, (frame, delay) =>
         {
             frame.Delay = delay;
             return frame;
