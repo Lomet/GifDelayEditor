@@ -13,7 +13,7 @@ public class GifMaker
     {
         if (!Gifs.Any()) throw new MissingMemberException(nameof(Gifs));
         // Create a new GifCreator object with the adjusted delays
-        using (GifCreator creator = AnimatedGif.Create(outputFile, 1))
+        using (GifCreator creator = AnimatedGif.Create(outputFile, 30))
         {
             // Add the frames to the GifCreator object with the adjusted delays
             foreach (var item in Gifs)
