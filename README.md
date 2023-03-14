@@ -6,6 +6,9 @@
 
 SineWaveGIF is a command-line tool that creates a sine wave animation from an input GIF file.
 
+## Why
+If you have a cut-out gif and you want it to run in a loop without jumps, you can use the GifsinMaker tool to modify the delays between frames. By adjusting the delays, you can create a smoother loop that doesn't have any noticeable jumps or pauses.
+
 ## Installation
 SineWaveGIF is a .NET Core console application and requires .NET Core 3.1 or later to run. You can download the latest version of .NET Core from the official website: https://dotnet.microsoft.com/download
 
@@ -43,6 +46,10 @@ output.gif
 ```
 
 ![output](https://user-images.githubusercontent.com/48094744/224869863-fccd001d-639c-4297-8b82-d3ab439759f6.gif)
+  
+## Contributing
+
+If you would like to contribute to GifDelayEditor, please fork the project and submit a pull request. We welcome contributions of all kinds, including bug fixes, feature requests, and documentation improvements.  
   
 ## License
 SineWaveGIF is licensed under the MIT License. See the LICENSE file for more information.
