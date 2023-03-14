@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GifsinMaker", "GifsinMaker\GifsinMaker.csproj", "{70A1D47A-739E-4200-B80D-76396830E00F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GifsinMaker", "GifsinMaker\GifsinMaker.csproj", "{70A1D47A-739E-4200-B80D-76396830E00F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestGifSineMaker", "TestGifSineMaker\TestGifSineMaker.csproj", "{36FC433A-CBB7-4756-9B89-032C6B14DD03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{70A1D47A-739E-4200-B80D-76396830E00F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70A1D47A-739E-4200-B80D-76396830E00F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70A1D47A-739E-4200-B80D-76396830E00F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36FC433A-CBB7-4756-9B89-032C6B14DD03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36FC433A-CBB7-4756-9B89-032C6B14DD03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36FC433A-CBB7-4756-9B89-032C6B14DD03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36FC433A-CBB7-4756-9B89-032C6B14DD03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

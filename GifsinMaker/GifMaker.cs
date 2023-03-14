@@ -4,9 +4,9 @@ namespace GifsineMaker
 {
     public class GifMaker : GifLoader
     {
-        public GifMaker(string inputFile) : base(inputFile)
+        public GifMaker(string inputFile, bool needSkip = true) : base(inputFile)
         {
-            AddReverse();
+            AddReverse(needSkip);
         }
 
         /// <summary>
@@ -19,7 +19,7 @@ namespace GifsineMaker
             if (!Frames.Any()) throw new MissingMemberException(nameof(Frames));
 
             // Create a new GifCreator object with the adjusted delays
-            using (GifCreator creator = AnimatedGif.Create(outputFile, 30))
+            using (GifCreator creator = AnimatedGif.Create(outputFile, (int)Average, -1))
             {
                 // Add the frames to the GifCreator object with the adjusted delays
                 foreach (var item in Frames)

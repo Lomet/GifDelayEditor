@@ -19,7 +19,6 @@ namespace GifsineMaker
             {
                 throw new FileNotFoundException("Input file not found.", inputFile);
             }
-
             using (Image gifImage = Image.FromFile(inputFile))
             {
                 FrameDimension dimension = new FrameDimension(gifImage.FrameDimensionsList[0]);
